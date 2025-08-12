@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form Example</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Content & Form Demonstration</h1>
+        <p>This page showcases advanced HTML5 elements and a fully-featured form with native validation.</p>
+    </header>
+
+    <section id="lists">
+        <h2>Organized Content with Lists</h2>
+        
+        <h3>Unordered List (Features)</h3>
+        <ul>
+            <li>Semantic HTML5 markup</li>
+            <li>Accessible form controls</li>
+            <li>Native validation without JavaScript</li>
+            <li>Responsive design</li>
+        </ul>
+        
+        <h3>Ordered List (Steps)</h3>
+        <ol>
+            <li>Review the content sections</li>
+            <li>Examine the form structure</li>
+            <li>Test the validation features</li>
+            <li>Submit the form</li>
+        </ol>
+        
+        <h3>Description List (Definitions)</h3>
+        <dl>
+            <dt>HTML5</dt>
+            <dd>The latest version of HyperText Markup Language</dd>
+            
+            <dt>Semantic Elements</dt>
+            <dd>Elements that clearly describe their meaning to browser and developer</dd>
+            
+            <dt>Native Validation</dt>
+            <dd>Form validation performed by the browser without JavaScript</dd>
+        </dl>
+    </section>
+
+    <section id="tables">
+        <h2>Data Presentation with Tables</h2>
+        
+        <table>
+            <caption>Sample Product Comparison</caption>
+            <thead>
+                <tr>
+                    <th>Feature</th>
+                    <th>Basic Plan</th>
+                    <th>Pro Plan</th>
+                    <th>Enterprise Plan</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Storage</td>
+                    <td>10GB</td>
+                    <td>50GB</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Users</td>
+                    <td>1</td>
+                    <td>5</td>
+                    <td>Unlimited</td>
+                </tr>
+                <tr>
+                    <td>Support</td>
+                    <td>Email only</td>
+                    <td>Priority email</td>
+                    <td>24/7 phone</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Price</td>
+                    <td>$9.99/month</td>
+                    <td>$29.99/month</td>
+                    <td>Contact us</td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+
+    <section id="media">
+        <h2>Media Elements</h2>
+        
+        <h3>Image with Figure/Figcaption</h3>
+        <figure>
+            <img src="https://via.placeholder.com/600x300" alt="Sample placeholder image" width="600" height="300">
+            <figcaption>Figure 1: Example of a placeholder image with proper semantic markup</figcaption>
+        </figure>
+        
+        <h3>Audio Element</h3>
+        <audio controls>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <h3>Video Element</h3>
+        <video width="600" controls poster="https://via.placeholder.com/600x300">
+            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="form">
+        <h2>Advanced HTML5 Form</h2>
+        
+        <form id="registration" novalidate>
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <label for="fullname">Full Name*:</label>
+                <input type="text" id="fullname" name="fullname" required minlength="3" 
+                       placeholder="Enter your full name" autocomplete="name">
+                
+                <label for="email">Email*:</label>
+                <input type="email" id="email" name="email" required 
+                       placeholder="your.email@example.com" autocomplete="email">
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" 
+                       placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                       title="Please use format: 123-456-7890" autocomplete="tel">
+                
+                <label for="birthdate">Date of Birth:</label>
+                <input type="date" id="birthdate" name="birthdate" max="2020-01-01">
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="120" 
+                       placeholder="Must be 18 or older">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Account Details</legend>
+                
+                <label for="username">Username*:</label>
+                <input type="text" id="username" name="username" required minlength="4" 
+                       placeholder="4+ characters" autocomplete="username">
+                
+                <label for="password">Password*:</label>
+                <input type="password" id="password" name="password" required 
+                       minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters"
+                       autocomplete="new-password">
+                
+                <label for="website">Website:</label>
+                <input type="url" id="website" name="website" 
+                       placeholder="https://example.com">
+                
+                <label for="favcolor">Favorite Color:</label>
+                <input type="color" id="favcolor" name="favcolor" value="#ff0000">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Preferences</legend>
+                
+                <label for="subscription">Subscription Plan:</label>
+                <select id="subscription" name="subscription" required>
+                    <option value="">-- Please select --</option>
+                    <option value="basic">Basic</option>
+                    <option value="pro">Pro</option>
+                    <option value="enterprise">Enterprise</option>
+                </select>
+                
+                <label>Interests (select up to 3):</label>
+                <div>
+                    <input type="checkbox" id="interest1" name="interests" value="web">
+                    <label for="interest1">Web Development</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="interest2" name="interests" value="mobile">
+                    <label for="interest2">Mobile Development</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="interest3" name="interests" value="ai">
+                    <label for="interest3">Artificial Intelligence</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="interest4" name="interests" value="data">
+                    <label for="interest4">Data Science</label>
+                </div>
+                
+                <label>Preferred Contact Method:</label>
+                <div>
+                    <input type="radio" id="contact-email" name="contact" value="email" checked>
+                    <label for="contact-email">Email</label>
+                </div>
+                <div>
+                    <input type="radio" id="contact-phone" name="contact" value="phone">
+                    <label for="contact-phone">Phone</label>
+                </div>
+                <div>
+                    <input type="radio" id="contact-mail" name="contact" value="mail">
+                    <label for="contact-mail">Postal Mail</label>
+                </div>
+                
+                <label for="volume">Notification Volume:</label>
+                <input type="range" id="volume" name="volume" min="0" max="100" step="10" value="50">
+                
+                <label for="avatar">Profile Picture:</label>
+                <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Additional Information</legend>
+                
+                <label for="bio">Biography:</label>
+                <textarea id="bio" name="bio" rows="4" 
+                          placeholder="Tell us about yourself..." maxlength="500"></textarea>
+                
+                <label for="referral">How did you hear about us?</label>
+                <input list="referral-sources" id="referral" name="referral">
+                <datalist id="referral-sources">
+                    <option value="Search Engine">
+                    <option value="Social Media">
+                    <option value="Friend">
+                    <option value="Advertisement">
+                    <option value="Other">
+                </datalist>
+                
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    Subscribe to our newsletter
+                </label>
+                
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    I agree to the <a href="#">terms and conditions</a>*
+                </label>
+            </fieldset>
+            
+            <div>
+                <button type="submit">Submit Registration</button>
+                <button type="reset">Reset Form</button>
+                <button type="button" disabled>Disabled Button</button>
+                <output name="result" for="fullname email"></output>
+            </div>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 HTML5 Demonstration. All rights reserved.</p>
+        <address>
+            Contact: <a href="mailto:info@example.com">jobmawira5750@gmail.com</a>
+        </address>
+    </footer>
+</body>
+</html>
